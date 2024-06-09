@@ -62,7 +62,7 @@ def bottomViewHelper(root, store, hd, level):
     if root == None:
         return 
  
-    if hd not in store or store[hd][0] < level:
+    if hd not in store or store[hd][0] <= level:
         store[hd] = [level, root.data]
  
     bottomViewHelper(root.left, store, hd - 1, level + 1)
